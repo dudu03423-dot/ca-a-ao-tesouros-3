@@ -1,0 +1,119 @@
+/* ===== Corpo e Layout ===== */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #ffe0f0; /* rosa */
+  overflow-x: hidden;
+}
+
+/* ===== Fotos animadas ===== */
+.foto-certa, .foto-final {
+  width: 300px;
+  max-width: 90%;
+  height: auto;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.7s ease;
+  display: block;
+  margin: 20px auto 0 auto;
+}
+.foto-certa.show, .foto-final.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ===== Texto ===== */
+h1 {
+  font-size: 32px;
+  color: #ff3399;
+}
+p {
+  font-size: 20px;
+  color: #ff3399;
+}
+#texto-final {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff3399;
+  margin-top: 20px;
+}
+
+/* ===== Input e botão ===== */
+input, button {
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+button {
+  cursor: pointer;
+  background-color: #ff99cc;
+  color: white;
+  border: none;
+}
+button:hover {
+  background-color: #ff66aa;
+}
+
+/* ===== Botão de próxima pista ===== */
+#proxima {
+  font-size: 32px;
+  text-decoration: none;
+  display: none;
+  animation: pulse 1s infinite;
+  color: red;
+  margin-top: 20px;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* ===== Botão de controle de música ===== */
+#music-control {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #ff66aa;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#music-control:hover {
+  background-color: #ff3399;
+}
+
+/* ===== Contêiner de corações ===== */
+#corações {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index: -1;
+}
+
+/* ===== Container das fotos (para alinhamento) ===== */
+.foto-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 600px) {
+  h1 { font-size: 26px; }
+  p { font-size: 18px; }
+  #texto-final { font-size: 24px; }
+  .foto-certa, .foto-final { width: 80%; }
+  #proxima { font-size: 28px; }
+  #music-control { font-size: 16px; padding: 8px 16px; }
+}
