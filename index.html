@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Caça ao Tesouro ❤️</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.foto-certa {
+  width: 300px;
+  height: auto;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.7s ease;
+}
+.foto-certa.show {
+  opacity: 1;
+  transform: scale(1);
+}
+</style>
+</head>
+<body>
+<h1>✨ Pista 1 ✨</h1>
+<p>Qual foi nosso primeiro encontro?</p>
+<input type="text" id="resposta" placeholder="Digite sua resposta...">
+<button onclick="verificar('cinema','feedback','foto-certa','proxima')">Verificar</button>
+<p id="feedback"></p>
+
+<div class="foto-container">
+  <img id="foto-certa" src="fotos/foto1.jpg" class="foto-certa">
+  <a id="proxima" href="pista2.html">❤️➡️</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
